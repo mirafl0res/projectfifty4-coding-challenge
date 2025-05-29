@@ -3,4 +3,27 @@ function generateTasks(objSlug) {
 
     var year = new Date().getFullYear(); // Get current year
     var objectiveNumber = 999; // Stubbed constant for objective number
+
+    //  Helper function to format task numbers with leading zeros for single digits
+    function padSingleDigits(n) {
+        if (n < 10) {
+            return '0' + n;
+        } else {
+            return String(n);
+        }
+    }
+
+    // Generate 5 tasks
+    for (var i = 0; i < 5; i++) {
+        var taskNumber = i + 1; // Start task numbering from 1
+
+        // Format the task number (leading zero for single digits)
+        var paddedTaskNumber = padSingleDigits(taskNumber);
+
+        // Construct task ID in the format 'OBJ-YYY-NNN-T##'
+        var taskId = 'OBJ-' + year + '-' + objectiveNumber + '-T' + paddedTaskNumber;
+
+        // Generate a title using the provided slug
+        var title = 'Task ' + taskNumber + ' for ' + 'Draft ICP Brief';
+    }
 }
