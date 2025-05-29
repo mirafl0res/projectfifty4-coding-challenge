@@ -38,4 +38,5 @@ function generateTasks(objSlug) {
             dueDate: dueDateStr,
         });
     }
+    return tasks;
 }
