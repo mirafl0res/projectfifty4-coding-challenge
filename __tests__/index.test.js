@@ -1,12 +1,21 @@
+// Major edits to this file were made with the assistance of ChatGPT.
+
 const { generateTasks } = require('../index.gs');
-const { mockLogger } = require('jest-gas');  
+const { mockLogger } = require('jest-gas');  // Import mockLogger from jest-gas
 
 describe('generateTasks', () => {
+  let logSpy;  // Declare a variable to hold the spy
+
   beforeAll(() => {
-    // Mocka Logger globalt så att den fungerar i testmiljön
+    // Ensure Logger is globally available and mock it using jest.spyOn
     global.Logger = {
-      log: jest.fn(),  // Mocka Logger.log som en Jest-funktion
+      log: jest.fn(),  // Mock Logger.log with jest.fn()
     };
+    logSpy = jest.spyOn(global.Logger, 'log').mockImplementation(() => {});  // Use jest.spyOn to mock Logger.log
+  });
+
+  afterAll(() => {
+    logSpy.mockRestore();  // Restore the original Logger.log after tests
   });
 
   it('should generate 5 tasks', () => {
@@ -27,6 +36,6 @@ describe('generateTasks', () => {
   it('should log results using Logger', () => {
     const tasks = generateTasks('Acquire-High-Paying-Clients');
     Logger.log('Generated tasks:', tasks);  // Mocked Logger.log call
-    expect(Logger.log).toHaveBeenCalledWith('Generated tasks:', tasks);  // Ensure Logger.log was called
+    expect(logSpy).toHaveBeenCalledWith('Generated tasks:', tasks);  // Verify that Logger.log was called
   });
 });
