@@ -30,5 +30,12 @@ function generateTasks(objSlug) {
         var dueDate = new Date();
         dueDate.setDate(dueDate.getDate() + i * 2);
         var dueDateStr = dueDate.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
+
+        // Create task object and add it to the tasks array
+        tasks.push({
+            taskId: taskId,
+            title: title,
+            dueDate: dueDateStr,
+        });
     }
 }
