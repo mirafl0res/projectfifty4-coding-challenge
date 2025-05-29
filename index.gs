@@ -40,3 +40,8 @@ function generateTasks(objSlug) {
     }
     return tasks;
 }
+
+function testGenerateTasks() {
+    var result = generateTasks("Acquire-High-Paying-Clients");  // Använd en exempel-slug
+    Logger.log(JSON.stringify(result, null, 2));  // Logga resultatet så att du kan se det
+  }
