@@ -1,0 +1,24 @@
+{
+  "name": "projectfifty4-coding-challenge",
+  "version": "1.0.0",
+  "description": "Coding Challenge – Developer &amp; Automation Interns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirafl0res/projectfifty4-coding-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mirafl0res/projectfifty4-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/mirafl0res/projectfifty4-coding-challenge#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
