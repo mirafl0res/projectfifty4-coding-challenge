@@ -1,0 +1,28 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Kör arbetsflödet när du pushar till main-grenen
+  pull_request:
+    branches:
+      - main  # Kör arbetsflödet när det finns en PR mot main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Använder den senaste Ubuntu-versionen för att köra testerna
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Hämtar koden från ditt repository
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2  # Installerar Node.js
+      with:
+        node-version: '16'  # Ange vilken version av Node.js du använder (t.ex. version 16)
+
+    - name: Install dependencies
+      run: npm install  # Installerar alla beroenden från package.json
+
+    - name: Run tests
+      run: npm test  # Kör testerna definierade i package.json (förutsätter att du har ett testskript)
