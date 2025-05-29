@@ -1,0 +1,27 @@
+[
+    {
+      "taskId": "OBJ-2025-999-T01",
+      "title": "Draft ICP Brief",
+      "dueDate": "2025-06-05"
+    },
+    {
+      "taskId": "OBJ-2025-999-T02",
+      "title": "Define Target Audience",
+      "dueDate": "2025-06-07"
+    },
+    {
+      "taskId": "OBJ-2025-999-T03",
+      "title": "Create Landing Page",
+      "dueDate": "2025-06-09"
+    },
+    {
+      "taskId": "OBJ-2025-999-T04",
+      "title": "Develop Marketing Plan",
+      "dueDate": "2025-06-11"
+    },
+    {
+      "taskId": "OBJ-2025-999-T05",
+      "title": "Launch Campaign",
+      "dueDate": "2025-06-13"
+    }
+  ]
