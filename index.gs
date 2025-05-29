@@ -46,3 +46,6 @@ function testGenerateTasks() {
     var result = generateTasks("Acquire-High-Paying-Clients");  // Example slug
     Logger.log(JSON.stringify(result, null, 2));  // Log the result in a readable format for testing
 }
+
+// Export the generateTasks function so it can be used in other project files
+module.exports = { generateTasks }; //

@@ -2,7 +2,7 @@
 // Test suite for the generateTasks function
 // This file contains tests to verify the correctness of the generateTasks function
 // which generates an array of tasks with specific taskId and dueDate formats.
-const { generateTasks } = require('../index');
+const { generateTasks } = require('../index.gs');
 
 describe('generateTasks', () => {
   it('should generate 5 tasks', () => {
