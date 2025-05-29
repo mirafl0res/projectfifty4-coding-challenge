@@ -25,5 +25,10 @@ function generateTasks(objSlug) {
 
         // Generate a title using the provided slug
         var title = 'Task ' + taskNumber + ' for ' + 'Draft ICP Brief';
+
+        // Set dueDate = today + (index × 2) days
+        var dueDate = new Date();
+        dueDate.setDate(dueDate.getDate() + i * 2);
+        var dueDateStr = dueDate.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
     }
 }
